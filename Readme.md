@@ -1,5 +1,3 @@
-# Using Step Functions
-
 In our application, emails and other forms for communications are sent asynchronously.
 
 ## For Example.
@@ -11,18 +9,16 @@ From the examples above
 1. For emails `send.email`
 2. For sms `send.sms`
 
-These can also be generalised as `send.communications`. An example of the payload might be
+These can also be generalised as `send.communications`. An example of the payload is
 ```json
 {
 	"primaryId": "123455",
-	"operation": "send.communication",
+	"operation": "send.communications",
 	"createdBy": {identifer of the user},
 	"created": {utc time stamp}
 }
 ```
-After these entries are enqueued they get processed by workers but sometimes they fail.
-
-Failed entries get written to a dead letter queue and get requeued after a ttl. 
+After these entries are enqueued they get processed by workers but sometimes they fail. Failed entries get written to a dead letter queue and get requeued after a ttl. 
 
 The process of queuing and dequeuing gets repeated for x number of times until it finally fails and the entry has to be processed manually.
 
@@ -32,4 +28,4 @@ to filter records been returned.
 
 
 
-[I'm an inline-style link](https://www.google.com)
+[Php Implementation](ImplementationPhp.md)
