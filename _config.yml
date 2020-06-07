@@ -1,1 +1,3 @@
 theme: jekyll-theme-cayman
+title: [Using AWS Step Functions]
+description: [Journey of deploying simple scripts on ec2 to step function.]
